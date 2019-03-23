@@ -49,6 +49,17 @@ body {
     margin: auto;
     border: none;
 }
+.cm-divider-left{
+    box-shadow: 0 2px 4px 0 rgba(118, 192, 255, 0.5);
+    background-color: #e6e6e6;
+    width: 1px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border: none;
+}
 .cm-title-lg {
     font-family: $font-stack;
     font-size: 30px;
@@ -57,6 +68,7 @@ body {
     color: $primary-black;
     margin-bottom: 40px;
     margin-top: 0px;
+    position: relative;
     // width: 50%;
     &.regular{
         font-weight: 300;
@@ -192,9 +204,69 @@ body {
             font-size: 14px;
             font-weight: 300;
             line-height: 1.29;
+            margin-bottom: 0px;
             margin-top: 20px;
             font-family: $font-stack;
             color: #2a2a2a;
         }
+    }
+}
+// Image links section (4th section)
+#imageCta{
+    display: flex;
+    >div{
+        flex:1;
+        position: relative;
+        >img{
+            width: 100%;
+        }
+        >a{
+            font-size: 30px;
+            text-decoration: none;
+            line-height: 1.33;
+            color: #ffffff;
+            position: absolute;
+            bottom: 45px;
+            left: 30px;
+            width: calc(100% - 60px);
+            font-family: $font-stack;
+            font-weight: 300;
+        }
+    }
+}
+// Terms and conditions (5th section)
+#cm-terms{
+    background: #fbfbfb;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    >ul{
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+        li{
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #2a2a2a;
+            font-style: $font-stack;
+        }
+    }
+}
+// hotel list (6th section)
+#hotelList{
+    background: #ffffff;
+    padding: 50px 40px;
+    >img,>svg{
+        width: 100%;
+    }
+}
+
+.strokebox{
+    stroke-dasharray: 350%;
+    transition: 3s;
+    /* stroke-dasharray: 0px; */
+    stroke-dashoffset: 350%;
+    &.visible{
+    stroke-dashoffset: 0%;
     }
 }
