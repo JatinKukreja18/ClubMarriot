@@ -1,0 +1,200 @@
+@import "./normalize.css";
+// @import "./skeleton.css";
+
+/* Font Family*/
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../assets/fonts/HelveticaNeue-UltraLight-06.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+  }
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/fonts/HelveticaNeue-01.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/fonts/HelveticaNeue-Light-08.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* Font Family ends*/
+/* MIXIN VARIABLES */
+$font-stack: 'HelveticaNeue',Helvetica, sans-serif;
+$primary-black: #2a2a2a;
+/* MIXIN VARIABLES */
+/* Generic styling*/
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+.cm-wrapper-md {
+  padding: 0px 110px;
+}
+.cm-wrapper-sm {
+  padding: 40px;
+}
+.cm-divider{
+    box-shadow: 0 2px 4px 0 rgba(118, 192, 255, 0.5);
+    background-color: #e6e6e6;
+    width: 1px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    border: none;
+}
+.cm-title-lg {
+    font-family: $font-stack;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 1.33;
+    color: $primary-black;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    // width: 50%;
+    &.regular{
+        font-weight: 300;
+    }
+}
+.text-center{
+    text-align: center;
+}
+/* Generic styling ends*/
+
+/* header styling */
+.cm-header {
+    height: 65px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(118, 192, 255, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    padding: 0px 25px;
+    // > img,
+    // > span {
+    //   // height: 100%;
+    // }
+  }
+// header styling ends
+/* section styling */
+
+// HERO
+.hero {
+  background: url("../assets/hero-banner-x2.jpg");
+  height: 584px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding-top: calc(76px + 65px);
+  >.cm-title-lg{
+      width: 50%;
+  }
+  > .hero-desc {
+    font-family: $font-stack;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #78797d;
+    width: 50%;
+    padding-right: 10px;
+  }
+}
+// Offering (2nd Section)
+#offering{
+    display: flex;
+    margin: 0px -10px 0px -10px;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    >div{
+        flex:1;
+        display: flex;
+        align-items: flex-start;
+        &:first-child{
+            padding-right: 62px;
+        }
+        &:last-child{
+            padding-left: 62px;
+        }
+        >img{
+            margin-right: 35px;
+        }
+        >div{
+            >h3{
+                font-family: $font-stack;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.56;
+                margin: 0px;
+                color: #939393;
+            }
+            >p{
+                font-family: $font-stack;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.29;
+                margin: 0px;
+                margin-top: 9px;
+                color: $primary-black;
+            }
+        }
+    }
+}
+// Addtional services (3rd section)
+
+#addtional{
+    background: #fbfbfb;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    >.cm-title-lg{
+        width: 80%;
+        margin: 0px auto 115px auto;
+    }
+}
+.service-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 255px;
+    &:last-child{
+        margin-bottom: 0px;
+    }
+    &:nth-child(even){
+        >img{
+            order:1;
+        }
+        >div{
+            order: 2;
+        }
+    }    
+    &:nth-child(odd){
+        >img{
+            order:2;
+        }
+        >div{
+            order: 1;
+        }
+    }    
+    >img{
+        width: 42%;
+    }
+    >div{
+        width: 38%;
+        >p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.29;
+            margin-top: 20px;
+            font-family: $font-stack;
+            color: #2a2a2a;
+        }
+    }
+}

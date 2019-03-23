@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106" height="87" viewBox="0 0 106 87">
+    <defs>
+        <circle id="b" cx="15" cy="15" r="15"/>
+        <filter id="a" width="156.7%" height="156.7%" x="-28.3%" y="-21.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#000" stroke-width="2">
+            <path d="M57.866 53.922c2.521-3.325 6.045-5.973 10.327-7.445a22.348 22.348 0 0 1 7.28-1.214c.39 0 .793.015 1.216.04l1.453.087.481 1.346c4.013 11.175-2.014 23.462-13.436 27.387a22.515 22.515 0 0 1-5.446 1.14"/>
+            <path d="M58.53 75.263c.384 0 .784-.014 1.201-.04l1.434-.087.475-1.342c3.96-11.148-1.989-23.404-13.257-27.32a21.826 21.826 0 0 0-7.182-1.21c-.384 0-.783.014-1.201.039l-1.433.087-.475 1.343C34.133 57.88 40.08 70.136 51.348 74.052a21.821 21.821 0 0 0 7.182 1.211zM68.866 45.645c-.177-4.062-1.423-8.12-3.82-11.68a21.55 21.55 0 0 0-4.993-5.254c-.303-.226-.626-.45-.973-.675l-1.183-.773-1.138.845c-5.827 4.312-8.927 11.19-8.893 18.155M82.866 75.763h-48M36.866 75.778l4.389 9.485H75.76l5.105-10M9.069 43.22h14.187c1.493 0 2.703 1.2 2.703 2.679v4.821c0 1.48-1.21 2.678-2.703 2.678H9.07c-1.493 0-2.703-1.198-2.703-2.678V45.9c0-1.48 1.21-2.678 2.703-2.678zM9.252 59.35v-6.108M23.074 53.477v5.872M3.884 59.35h24.794a2.406 2.406 0 0 1 2.417 2.394v21.282a2.406 2.406 0 0 1-2.417 2.395H3.884a2.406 2.406 0 0 1-2.416-2.395V61.744a2.406 2.406 0 0 1 2.416-2.395zM11.304 43.377L6.21 16.13M20.904 43.025l4.105-26.435M16.345 43.107V13"/>
+        </g>
+        <g transform="translate(71 3)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#2A2A2A" xlink:href="#b"/>
+        </g>
+        <text fill="#FFF" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" transform="translate(71 3)">
+            <tspan x="8.4" y="13.6">x2</tspan>
+        </text>
+    </g>
+</svg>
