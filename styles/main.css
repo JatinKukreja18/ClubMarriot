@@ -342,10 +342,13 @@ body.modal-opened {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-    .hero > .cm-title-lg {
+    .hero .hero-content > .cm-title-lg {
       width: 66%; }
-    .hero > .hero-desc {
+    .hero .hero-content > .hero-desc {
       width: 70%; }
+    .hero .hero-image {
+      position: absolute;
+      bottom: 0px; }
 
   #offering > div:first-child {
     padding-right: 36px; }

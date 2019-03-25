@@ -415,11 +415,17 @@ body.modal-opened{
         // background: url("../assets/mobile-banner-x2.jpg");
         background-position: center;
         background-size: cover;
-        >.cm-title-lg{
+        .hero-content{
+            >.cm-title-lg{
             width: 66%;
+            }
+            >.hero-desc{
+                width: 70%;
+            }
         }
-        >.hero-desc{
-            width: 70%;
+        .hero-image{
+            position: absolute;
+            bottom: 0px;
         }
     }
     #offering{
