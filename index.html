@@ -17,8 +17,72 @@
     <div class="preloader"></div>
     <header class="cm-header">
       <img src="./assets/logo-cm.svg" alt="" />
+      <button class="cm-button hidden hidden-mobile" id="avail-button" onClick="toggleForm()">Avail this offer</button>
     </header>
     <main>
+      <form  id="availForm" class="cm-form visible">
+        <img src="./assets/icons/cross.svg" id="availFormCross" onClick="toggleForm()"  alt="">
+        <img src="./assets/icons/cross.svg" id="availFormCollapse" onClick="toggleForm()" alt="">
+        <div class="cm-input-group">
+          <div class="cm-select">
+            <img src="./assets/icons/dropdown.svg" alt="" >
+            <input type="text" class="cm-input" placeholder="Title" id="avail-title" required >
+            <ul class="cm-select-options">
+              <li class="cm-select-option" data-value="Mr.">Mr.</li>
+              <li class="cm-select-option" data-value="Ms.">Ms.</li>
+            </ul>
+          </div>
+          <!-- <input type="text" class="cm-input" placeholder="Title" id="cm-title"> -->
+          <input type="text" class="cm-input" placeholder="First Name" id="avail-firstname" required>
+        </div>
+        <input type="text" type="text" class="cm-input" placeholder="Last Name" required>
+        <div class="cm-input-group">  
+          <span class="cm-text" style="position: absolute;left:0px;top:0px">+91</span>
+          <input style="padding-left:42px;" type="text" type="number" maxlength="10" class="cm-input"  required id="avail-mobile" pattern="^[0-9]*$" placeholder="Mobile">
+        </div>
+        <input type="text" type="text" class="cm-input" placeholder="Email"  pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"        required>
+        <input type="text" type="text" class="cm-input" placeholder="Address Line 1" required>
+        <input type="text" type="text" class="cm-input" placeholder="Address Line 2" required>
+        <div class="cm-input-group vertical">        
+          <div class="cm-select">
+            <img src="./assets/icons/dropdown.svg" alt="" >
+            <input type="text" class="cm-input" placeholder="City" id="avail-city" required >
+            <ul class="cm-select-options">
+              <li class="cm-select-option" data-value="Gurgaon">Gurgaon</li>
+              <li class="cm-select-option" data-value="Delhi">Delhi</li>
+              <li class="cm-select-option" data-value="Jaipur">Jaipur</li>
+            </ul>
+          </div>
+          <span class="help-text">*This offer is only available in India</span>
+        </div>
+        
+        <div class="cm-input-group">
+          <input type="text" type="number" class="cm-input" placeholder="Pin Code"  pattern="^[0-9]*$" id="avail-pincode" required>
+          <div class="cm-select" id="state-select">
+              <img src="./assets/icons/dropdown.svg" alt="" >
+              <input type="text" class="cm-input" placeholder="State" id="avail-state" required >
+              <ul class="cm-select-options">
+                <li class="cm-select-option" data-value="Haryana">Haryana</li>
+                <li class="cm-select-option" data-value="Rajasthan">Rajasthan</li>
+              </ul>
+            </div>
+        </div>
+        <div class="cm-input-group vertical">
+            <label for="avail-terms" class="cm-input-label">
+              <input type="checkbox" class=" cm-input-checkbox" id="avail-terms" required>
+              <span class="check-icon"></span>
+              <span>I have read and agree to the <a data-target="#terms-modal" class="cm-modal-link">terms & conditions</a> </span>
+            </label>
+            <label for="avail-consent" class="cm-input-label">
+                <input type="checkbox" class="cm-input-checkbox" id="avail-consent" required>
+                <span class="check-icon"></span>
+              <span>I consent to the use of my personal data by TLC and its program and hotel partners 
+                    to send offers/promotions to me via email, telephone, messages or mail, consistent 
+                    with my communication preferences. Read full <a data-target="#declaration-modal" class="cm-modal-link">declaration</a> and privacy policy.</span>
+            </label>
+          </div>
+        <button class="cm-button primary" onClick="submitForm()">Avail Now</button>
+      </form>
       <section id="#cm-hero" class="hero ">
         <img src="./assets/hero-banner-x2.jpg" class="hero-image visible-md"  alt="">
         <img src="./assets/hero-banner-x3.jpg" class="hero-image visible-lg"  alt="">
@@ -121,17 +185,19 @@
           <a href="">View our list of Marriott operated Spa’s <img src="./assets/icons/right-chevron.svg" alt=""></a>
         </div>
       </section>
-      <section id="cm-terms" class="cm-wrapper-sm cm-wrapper-md">
-          <h1 class="cm-title-lg">Terms and Conditions</h1>
-          <ul>
-              <li>1. Membership can be availed only by Primary card holders on providing a valid e-mail ID and mobile number registered on your HDFC Bank Infinia credit Card.
-                    
-                   </li>
-              <li>On successful registration, membership number will be emailed to you within 48 working hours from support@clubmarriott.in</li>
-              <li> 3. The membership will be valid for a period of 1 year from the date of issuance.
-                    For a detailed list of our terms &amp; conditions, please <a data-target="deduct-modal" class="cm-modal-link">click here</a></li>
-           
-          </ul>
+      <section id="cm-terms">
+          <div class="cm-wrapper-sm cm-wrapper-md">
+            <h1 class="cm-title-lg">Terms and Conditions</h1>
+            <ul>
+                <li>1. Membership can be availed only by Primary card holders on providing a valid e-mail ID and mobile number registered on your HDFC Bank Infinia credit Card.
+                      
+                     </li>
+                <li>On successful registration, membership number will be emailed to you within 48 working hours from support@clubmarriott.in</li>
+                <li> 3. The membership will be valid for a period of 1 year from the date of issuance.
+                      For a detailed list of our terms &amp; conditions, please <a data-target="deduct-modal" class="cm-modal-link">click here</a></li>
+             
+            </ul>
+          </div>
       </section>
       <section id="hotelList" class="cm-wrapper-md ">
             <svg class="hidden-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 945 626">
@@ -256,12 +322,13 @@
             
         <img src="./assets/hotellist-mobile.svg" alt="" class="visible-mobile">
         </section>
+        <button class="avail-mobile-button visible-mobile" onClick="toggleForm()" >Avail this offer</button>
     </main>
 
 
 
-    <div class="cm-modal" id="disclamer-model">
-        <a  class="cm-modal-backdrop" onClick="closeModal(this)"></a>
+    <div class="cm-modal" id="declaration-modal">
+        <a  class="cm-modal-backdrop" onClick="closeModal()"></a>
         <div class="modal-body">
             <a  class="cm-modal-close">
                 <img src="./assets/icons/cross.svg" alt="">
@@ -277,12 +344,12 @@
                 Policy. If you choose not to receive any communication from us or request for full or 
                 partial deletion of your information, please write to us at privacyofficer@tlcgroup.com  </p>
             <div class="cm-button-group centered">
-                <button class="cm-button centered">Done</button>
+                <button class="cm-button centered" onClick="closeModal()">Done</button>
             </div>
         </div>
     </div>
     <div class="cm-modal " id="deduct-modal">
-            <a  class="cm-modal-backdrop" onClick="closeModal(this)"></a>
+            <a  class="cm-modal-backdrop" onClick="closeModal()"></a>
             <div class="modal-body">
                 <a  class="cm-modal-close">
                     <img src="./assets/icons/cross.svg" alt="">
@@ -292,7 +359,7 @@
                         This amount will not be reversed after verification.  Please click below to continue.  </p>
                 <div class="cm-button-group stacked">
                     <button class="cm-button primary">Proceed to enter card details</button>
-                    <button class="cm-button secondary">Cancel</button>
+                    <button class="cm-button secondary" onClick="closeModal()">Cancel</button>
                 </div>
             </div>
         </div>
@@ -316,33 +383,64 @@
        window.onload=  ()=>{
         document.querySelector('.preloader').classList.add('loaded');
        }
-      //  document.querySelector('.hero-image').onload = function(e){ 
-      //    if(document.querySelector('.hero-image').complete){
-      //      document.querySelector('.preloader').classList.add('loaded');          
-      //    }
-      // }
 
-        
-       (function(){
+      function unselectAll(target){
+        Array.from(target.querySelectorAll('.cm-select-option')).forEach(element => {
+          element.classList.remove('active')
+          element.classList.remove('selected')
+        });
+      }
+      function submitForm(e){
+        console.log(this)
+        event.preventDefault();
+        document.querySelector('#deduct-modal').classList.add('in');
+        if(document.body.clientWidth < 767){
+          document.querySelector('#availForm').classList.toggle('visible-mobile');        
+          document.querySelector('#availForm').reset();      
+
+        }
+      }
+      (function(){
+        document.querySelector('#availForm').addEventListener('oninvalid',function(){
+          console.log(this);
+        })
    
-    Array.from(document.querySelectorAll('.cm-modal-link')).forEach(function(element) {
-        element.addEventListener('click', function(){       
-            const target = "#" + element.dataset.target;
-        document.querySelector(target).classList.add('opening');
-        setTimeout(() => {
-            document.querySelector(target).classList.add('in');
-            document.querySelector(target).classList.remove('opening');
-            document.querySelector('body').classList.add('modal-opened');
-        }, 0);
-        });
-    });
-    Array.from(document.querySelectorAll('.cm-modal-close')).forEach(function(element) {
-        element.addEventListener('click', function(){       
-        const target = '#' + element.parentElement.parentElement.id;
-        closeModalSteps(target);
-        });
-    });
-}())
+          Array.from(document.querySelectorAll('.cm-select > img')).forEach(function(element) {
+              element.addEventListener('click', function(){       
+                  this.parentElement.classList.toggle('active');
+                  this.parentElement.querySelector('.cm-select-options').classList.toggle('in');
+              });
+          });
+          Array.from(document.querySelectorAll('.cm-select-option')).forEach(function(element) {
+              element.addEventListener('click', function(){   
+                  unselectAll(this.parentElement.parentElement);
+                  this.classList.add('active')
+                  this.classList.add('selected');
+                  this.parentElement.parentElement.querySelector('.cm-input').value = this.dataset.value;
+                  this.parentElement.classList.toggle('in');
+                  document.querySelector('.cm-select.active').classList.remove('active')
+              });
+          });
+
+          
+          Array.from(document.querySelectorAll('.cm-modal-link')).forEach(function(element) {
+              element.addEventListener('click', function(){       
+                  const target =  element.dataset.target;
+              document.querySelector(target).classList.add('opening');
+              setTimeout(() => {
+                  document.querySelector(target).classList.add('in');
+                  document.querySelector(target).classList.remove('opening');
+                  document.querySelector('body').classList.add('modal-opened');
+              }, 0);
+              });
+          });
+          Array.from(document.querySelectorAll('.cm-modal-close')).forEach(function(element) {
+              element.addEventListener('click', function(){       
+              const target = '#' + element.parentElement.parentElement.id;
+              closeModalSteps(target);
+              });
+          });
+      }())
     </script>
 </body>
 </html>
