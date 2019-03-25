@@ -29,7 +29,9 @@ body {
   box-sizing: border-box; }
 
 .cm-wrapper-md {
-  padding: 0px 110px; }
+  padding: 0px 110px;
+  max-width: 1366px;
+  margin: auto; }
 
 .cm-wrapper-sm {
   padding: 40px; }
@@ -110,7 +112,8 @@ button.cm-button {
   top: 0px;
   left: 0px;
   box-sizing: border-box;
-  padding: 0px 25px; }
+  padding: 0px 25px;
+  z-index: 3; }
 
 /* section styling */
 .hero {
@@ -128,6 +131,7 @@ button.cm-button {
 .hero-content {
   position: absolute;
   top: 0px;
+  right: 0px;
   left: 0px; }
   .hero-content > .cm-title-lg {
     width: 50%; }
@@ -142,9 +146,7 @@ button.cm-button {
 
 #offering {
   display: flex;
-  margin: 0px -10px 0px -10px;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding: 50px 100px; }
   #offering > div {
     flex: 1;
     display: flex;
@@ -322,7 +324,17 @@ body.modal-opened {
     opacity: 0.7; }
 
 /* Modal */
+.hero-image {
+  object-fit: contain;
+  height: 580px;
+  object-position: 90% 0px; }
+
 /* Media Queries*/
+@media (min-width: 1367px) {
+  .hero-image {
+    object-fit: contain;
+    height: 580px;
+    object-position: 90% 0px; } }
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none; }
@@ -348,6 +360,8 @@ body.modal-opened {
       width: 70%; }
     .hero .hero-image {
       position: absolute;
+      object-fit: unset;
+      height: unset;
       bottom: 0px; }
 
   #offering > div:first-child {
