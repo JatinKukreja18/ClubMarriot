@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101.473" height="92.341" viewBox="0 0 101.473 92.341">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}.cls-2{fill:#2a2a2a}.cls-3{fill:#fff;font-size:10px;font-family:Roboto-Medium,Roboto;font-weight:500}.cls-4{filter:url(#Oval_Copy_2)}
+        </style>
+        <filter id="Oval_Copy_2" width="37" height="37" x="64.473" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="2"/>
+            <feFlood flood-opacity=".502"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_18" data-name="Group 18" transform="translate(-241.527 4)">
+        <g id="Group_27" data-name="Group 27" transform="rotate(180 161 2.5)">
+            <path id="Stroke_1" d="M-18.971 7.63a18.819 18.819 0 0 1 8.905-6.56A18.9 18.9 0 0 1-3.789 0c.336 0 .689.013 1.049.035l1.253.077.415 1.188a18.95 18.95 0 0 1-11.586 24.132 19.089 19.089 0 0 1-2.237.635 19.02 19.02 0 0 1-2.459.37" class="cls-1" data-name="Stroke 1" transform="rotate(180 1.217 -23.806)"/>
+            <path id="Stroke_3" d="M-3.789 26.5c.336 0 .685-.013 1.05-.035l1.253-.077.415-1.186A18.951 18.951 0 0 0-12.657 1.07 18.89 18.89 0 0 0-18.933 0c-.336 0-.684.013-1.05.035l-1.252.077-.415 1.188a18.95 18.95 0 0 0 11.585 24.132A18.885 18.885 0 0 0-3.789 26.5z" class="cls-1" data-name="Stroke 3" transform="rotate(180 8.856 -23.806)"/>
+            <path id="Stroke_5" d="M0 15.78A18.823 18.823 0 0 0-3.439 5.753a18.91 18.91 0 0 0-4.5-4.51 15.675 15.675 0 0 0-.871-.58L-9.875 0-10.9.725a18.916 18.916 0 0 0-8.006 15.586" class="cls-1" data-name="Stroke 5" transform="rotate(180 5.892 -16.07)"/>
+            <path id="Stroke_7" d="M0 .5h-41.841" class="cls-1" data-name="Stroke 7" transform="rotate(180 0 -36.789)"/>
+            <path id="Stroke_9" d="M-38.287.444l3.819 8.173h30.026L0 0" class="cls-1" data-name="Stroke 9" transform="rotate(180 .896 -36.773)"/>
+            <path id="Stroke_11" d="M-19.031 0h15.986A3.045 3.045 0 0 1 0 3.045v5.482a3.045 3.045 0 0 1-3.045 3.045h-15.986a3.045 3.045 0 0 1-3.045-3.045V3.045A3.045 3.045 0 0 1-19.031 0z" class="cls-1" data-name="Stroke 11" transform="rotate(180 25.939 -17.18)"/>
+            <path id="Stroke_13" d="M-.5 6.944V0" class="cls-1" data-name="Stroke 13" transform="rotate(180 35.101 -22.877)"/>
+            <path id="Stroke_15" d="M-.5 0v6.677" class="cls-1" data-name="Stroke 15" transform="rotate(180 27.314 -23.011)"/>
+            <path id="Stroke_17" d="M-30.66 0h27.937A2.723 2.723 0 0 1 0 2.723v24.2a2.723 2.723 0 0 1-2.723 2.723H-30.66a2.723 2.723 0 0 1-2.723-2.723v-24.2A2.723 2.723 0 0 1-30.66 0z" class="cls-1" data-name="Stroke 17" transform="rotate(180 23.045 -26.349)"/>
+            <path id="Stroke_21" d="M0 30.979L-5.741 0" class="cls-1" data-name="Stroke 21" transform="rotate(180 34.195 -1.78)"/>
+            <path id="Stroke_23" d="M-4.626 30.056L0 0" class="cls-1" data-name="Stroke 23" transform="rotate(180 26.474 -2.041)"/>
+            <path id="Stroke_25" d="M-.5 34.231V0" class="cls-1" data-name="Stroke 25" transform="rotate(180 31.105 0)"/>
+        </g>
+        <g id="Group_17" data-name="Group 17">
+            <g class="cls-4" transform="translate(241.53 -4)">
+                <circle id="Oval_Copy_2-2" cx="12.5" cy="12.5" r="12.5" class="cls-2" data-name="Oval Copy 2" transform="translate(70.47 4)"/>
+            </g>
+            <text id="x2_copy_2" class="cls-3" data-name="x2 copy 2" transform="translate(319 16)">
+                <tspan x="0" y="0">x2</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="107.001" height="94.558" viewBox="0 0 107.001 94.558">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}.cls-2{stroke-linecap:round}.cls-3{fill:#2a2a2a}.cls-4{fill:#fff;font-size:10px;font-family:Roboto-Medium,Roboto;font-weight:500}.cls-5{filter:url(#Oval_Copy)}
+        </style>
+        <filter id="Oval_Copy" width="37" height="37" x="70.001" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="2"/>
+            <feFlood flood-opacity=".502"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_20" data-name="Group 20" transform="translate(-278.999 -1864)">
+        <g id="Group_15_Copy" data-name="Group 15 Copy" transform="translate(280 1876)">
+            <path id="Stroke_1" d="M0 57.634h39.575V0H0z" class="cls-1" data-name="Stroke 1" transform="translate(39.575 23.874)"/>
+            <path id="Stroke_14" d="M3.382.019a3.046 3.046 0 1 0 2.691 3.362A3.046 3.046 0 0 0 3.382.019z" class="cls-1" data-name="Stroke 14" transform="translate(52 44.169)"/>
+            <path id="Stroke_15" d="M0 14.531L14.531 0" class="cls-2" data-name="Stroke 15" transform="translate(52.871 45.04)"/>
+            <path id="Stroke_16" d="M2.71 6.073A3.046 3.046 0 1 0 .019 2.711 3.044 3.044 0 0 0 2.71 6.073z" class="cls-1" data-name="Stroke 16" transform="translate(62.009 54.177)"/>
+            <path id="Stroke_3" d="M23.229 11.614a11.615 11.615 0 1 0-11.614 11.614 11.614 11.614 0 0 0 11.614-11.614z" class="cls-1" data-name="Stroke 3" transform="translate(-.001 16.561)"/>
+            <path id="Fill_4" d="M.5 0v41.769" data-name="Fill 4" transform="translate(11.114 39.789)"/>
+            <path id="Stroke_5" d="M.5 0v41.769" class="cls-2" data-name="Stroke 5" transform="translate(11.114 39.789)"/>
+            <path id="Stroke_8" d="M0 .5h8.388" class="cls-2" data-name="Stroke 8" transform="translate(11.83 69)"/>
+            <path id="Stroke_11" d="M0 .5h8.388" class="cls-2" data-name="Stroke 11" transform="translate(11.83 77.173)"/>
+            <path id="Stroke_13" d="M32.262 16.131a16.131 16.131 0 0 0-32.262 0" class="cls-2" data-name="Stroke 13" transform="translate(11.4)"/>
+        </g>
+        <g id="Group_19" data-name="Group 19" transform="translate(30 1867)">
+            <g class="cls-5" transform="translate(249 -3)">
+                <circle id="Oval_Copy-2" cx="12.5" cy="12.5" r="12.5" class="cls-3" data-name="Oval Copy" transform="translate(76 4)"/>
+            </g>
+            <text id="x2_copy" class="cls-4" data-name="x2 copy" transform="translate(332 17)">
+                <tspan x="0" y="0">x2</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

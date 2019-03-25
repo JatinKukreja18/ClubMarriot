@@ -195,8 +195,6 @@ button.cm-button {
     order: 2; }
   .service-box:nth-child(odd) > div {
     order: 1; }
-  .service-box > img {
-    width: 42%; }
   .service-box > div {
     width: 38%; }
     .service-box > div > p {
@@ -207,6 +205,10 @@ button.cm-button {
       margin-top: 20px;
       font-family: "HelveticaNeue", Helvetica, sans-serif;
       color: #2a2a2a; }
+    .service-box > div > img {
+      margin-bottom: 35px; }
+    .service-box > div > h1 {
+      margin-bottom: 0px; }
 
 #imageCta {
   display: flex; }
@@ -364,14 +366,19 @@ body.modal-opened {
       height: unset;
       bottom: 0px; }
 
-  #offering > div:first-child {
-    padding-right: 36px; }
-  #offering > div:last-child {
-    padding-left: 36px; }
-  #offering > div > img {
-    margin-right: 25px; }
-  #offering > div > div > h3 {
-    font-weight: 100; }
+  #offering {
+    padding: 50px 30px; }
+    #offering > div {
+      flex-direction: column; }
+      #offering > div:first-child {
+        padding-right: 30px; }
+      #offering > div:last-child {
+        padding-left: 30px; }
+      #offering > div > img {
+        margin: auto;
+        margin-bottom: 30px; }
+      #offering > div > div > h3 {
+        font-weight: 100; }
 
   #addtional {
     padding-top: 0px;
@@ -406,7 +413,8 @@ body.modal-opened {
       align-items: center;
       order: 1; }
       .service-box:nth-child(even) > div > img, .service-box:nth-child(odd) > div > img {
-        margin-bottom: 24px; }
+        margin-bottom: 24px;
+        width: 88px; }
       .service-box:nth-child(even) > div > h1, .service-box:nth-child(odd) > div > h1 {
         text-align: center;
         font-weight: 100; }

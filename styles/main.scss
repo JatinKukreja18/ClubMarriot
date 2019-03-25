@@ -248,7 +248,7 @@ position: relative;
         }
     }    
     >img{
-        width: 42%;
+        // width: 42%;
     }
     >div{
         width: 38%;
@@ -260,6 +260,12 @@ position: relative;
             margin-top: 20px;
             font-family: $font-stack;
             color: #2a2a2a;
+        }
+        >img{
+            margin-bottom: 35px;
+        }
+        >h1{
+            margin-bottom: 0px;
         }
     }
 }
@@ -447,15 +453,18 @@ body.modal-opened{
         }
     }
     #offering{
+        padding: 50px 30px;
         > div {
+            flex-direction: column;
             &:first-child{
-                padding-right: 36px;
+                padding-right: 30px;
             }
             &:last-child{
-                padding-left: 36px;
+                padding-left: 30px;
             }
             >img{
-                margin-right: 25px;
+                margin: auto;
+                margin-bottom: 30px;
             }
             >div{
                 >h3{
@@ -502,6 +511,7 @@ body.modal-opened{
                 order: 1;
                 >img{
                     margin-bottom: 24px;
+                    width: 88px;
                 }
                 >h1{
                     text-align: center;
