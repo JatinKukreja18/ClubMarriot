@@ -14,12 +14,14 @@
     <script src="main.js"></script>
   </head>
   <body>
+    <div class="preloader"></div>
     <header class="cm-header">
       <img src="./assets/logo-cm.svg" alt="" />
     </header>
     <main>
       <section id="#cm-hero" class="hero ">
-        <img src="./assets/hero-banner-x2.jpg" class="hero-image hidden-mobile"  alt="">
+        <img src="./assets/hero-banner-x2.jpg" class="hero-image visible-md"  alt="">
+        <img src="./assets/hero-banner-x3.jpg" class="hero-image visible-lg"  alt="">
         <img src="./assets/mobile-banner-x2.jpg" class="hero-image visible-mobile"  alt="">
         <div class="cm-wrapper-md hero-content">
           <h1 class="cm-title-lg ">
@@ -93,7 +95,7 @@
               </div>
             </div>
             <div class="service-box cm-wrapper-md">
-              <img src="/assets/GIFs/03_TLC-Marriot_GIF_spa-treatments.gif" class="hidden-mobile" alt="" />
+              <img src="/assets/GIFs/1x/03_TLC-Marriot_GIF_spa-treatments.gif" class="hidden-mobile" alt="" />
               <img src="/assets/GIFs/1x/03_TLC-Marriot_GIF_spa-treatments_mobile.gif" class="visible-mobile" alt="" />
               <div>
                 <img src="./assets/icons/essential-oil.svg" alt="" />
@@ -112,11 +114,11 @@
       <section id="imageCta">
         <div>
           <img src="./assets/hotels.jpg" alt="" />
-          <a href="">Explore our list of participating hotels </a>
+          <a href="">Explore our list of participating hotels <img src="./assets/icons/right-chevron.svg" alt=""> </a>
         </div>
         <div>
           <img src="./assets/spas.jpg" alt="" />
-          <a href="">View our list of Marriott operated Spa’s</a>
+          <a href="">View our list of Marriott operated Spa’s <img src="./assets/icons/right-chevron.svg" alt=""></a>
         </div>
       </section>
       <section id="cm-terms" class="cm-wrapper-sm cm-wrapper-md">
@@ -296,60 +298,51 @@
         </div>
 
     <script>
-       
+      var img = document.querySelector('.hero-image')
+
+      function loaded() {
+        document.querySelector('.preloader').classList.add('loaded'); 
+      }
+
+      if (img.complete) {
+        loaded()
+      } else {
+        img.addEventListener('load', loaded)
+        img.addEventListener('error', function() {
+            alert('error')
+        })
+      }
+
+      //  document.addEventListener("load", ()=>{
+      //   document.querySelector('.preloader').classList.add('loaded');
+      //  });
+      //  document.querySelector('.hero-image').onload = function(e){ 
+      //    if(document.querySelector('.hero-image').complete){
+      //      document.querySelector('.preloader').classList.add('loaded');          
+      //    }
+      // }
+
         
-        window.onscroll = function() {scrollcheck()};
-
-        function scrollcheck() {
-        if (document.body.scrollTop >= document.querySelector('#hotelList').offsetTop - 200  || document.documentElement.scrollTop >= document.querySelector('#hotelList').offsetTop - 200) {
-            document.querySelector('.strokebox').classList.add('visible');
-
-        }
-        }
-        function closeModalSteps(target){
-            document.querySelector(target).classList.add('opening');           
-                document.querySelector(target).classList.remove('in');
-                document.querySelector('body').classList.remove('modal-opened')
-                setTimeout(() => {
-                    document.querySelector(target).classList.remove('opening');
-                }, 500);
-        }
-        (function(){
-            // document.querySelector('.cm-modal-link').addEventListener('click',(e)=>{
-            //     console.log(e.target.dataset.target)
-            //     const target = e.target.dataset.target;
-            //     document.querySelector(target).classList.add('opening');
-            //     setTimeout(() => {
-            //         document.querySelector(target).classList.add('in');
-            //         document.querySelector(target).classList.remove('opening');
-            //         document.querySelector('body').classList.add('modal-opened');
-            //     }, 0);
-            // })
-            Array.from(document.querySelectorAll('.cm-modal-link')).forEach(function(element) {
-                element.addEventListener('click', function(){       
-                    const target = "#" + element.dataset.target;
-                document.querySelector(target).classList.add('opening');
-                setTimeout(() => {
-                    document.querySelector(target).classList.add('in');
-                    document.querySelector(target).classList.remove('opening');
-                    document.querySelector('body').classList.add('modal-opened');
-                }, 0);
-                });
-            });
-            Array.from(document.querySelectorAll('.cm-modal-close')).forEach(function(element) {
-                element.addEventListener('click', function(){       
-                const target = '#' + element.parentElement.parentElement.id;
-                closeModalSteps(target);
-                });
-            });
-        }())
-        function closeModalCross(e){
-            const target = '#' + e.target.parentElement.parentElement.parentElement.id;
-        }
-        function closeModal(value){
-            const target = '#' + value.parentElement.id;
-            closeModalSteps(target)
-        }
+       (function(){
+   
+    Array.from(document.querySelectorAll('.cm-modal-link')).forEach(function(element) {
+        element.addEventListener('click', function(){       
+            const target = "#" + element.dataset.target;
+        document.querySelector(target).classList.add('opening');
+        setTimeout(() => {
+            document.querySelector(target).classList.add('in');
+            document.querySelector(target).classList.remove('opening');
+            document.querySelector('body').classList.add('modal-opened');
+        }, 0);
+        });
+    });
+    Array.from(document.querySelectorAll('.cm-modal-close')).forEach(function(element) {
+        element.addEventListener('click', function(){       
+        const target = '#' + element.parentElement.parentElement.id;
+        closeModalSteps(target);
+        });
+    });
+}())
     </script>
 </body>
 </html>

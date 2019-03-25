@@ -90,7 +90,7 @@ button.cm-button {
   font-size: 14px;
   border: solid 1px #000000;
   margin-bottom: 15px;
-  transition: .3s; }
+  transition: 0.3s; }
   button.cm-button.primary {
     color: #000; }
   button.cm-button.secondary {
@@ -98,6 +98,20 @@ button.cm-button {
   button.cm-button:hover {
     background: rgba(0, 0, 0, 0.8);
     color: #fff; }
+
+.preloader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  opacity: 1;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.8s; }
+  .preloader.loaded {
+    opacity: 0;
+    z-index: -1; }
 
 /* Generic styling ends*/
 /* header styling */
@@ -119,18 +133,18 @@ button.cm-button {
 .hero {
   position: relative;
   width: 100%;
-  background-position: center;
-  background-size: contain;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   margin-top: calc(76px + 65px); }
 
 .hero-image {
-  width: 100%; }
+  width: 100%;
+  object-fit: contain;
+  max-height: 65vh;
+  object-position: 100%; }
 
 .hero-content {
   position: absolute;
   top: 0px;
+  max-width: 100%;
   right: 0px;
   left: 0px; }
   .hero-content > .cm-title-lg {
@@ -183,6 +197,7 @@ button.cm-button {
 
 .service-box {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 135px; }
   .service-box:last-child {
@@ -216,7 +231,9 @@ button.cm-button {
     flex: 1;
     position: relative; }
     #imageCta > div > img {
-      width: 100%; }
+      width: 100%;
+      object-fit: cover;
+      max-height: 400px; }
     #imageCta > div > a {
       font-size: 30px;
       text-decoration: none;
@@ -228,6 +245,10 @@ button.cm-button {
       width: calc(100% - 60px);
       font-family: "HelveticaNeue", Helvetica, sans-serif;
       font-weight: 300; }
+      #imageCta > div > a > img {
+        transition: .3s; }
+      #imageCta > div > a:hover > img {
+        padding-left: 5px; }
 
 #cm-terms {
   background: #fbfbfb;
@@ -247,7 +268,8 @@ button.cm-button {
 #hotelList {
   background: #ffffff;
   padding: 50px 40px; }
-  #hotelList > img, #hotelList > svg {
+  #hotelList > img,
+  #hotelList > svg {
     width: 100%; }
 
 .strokebox {
@@ -264,6 +286,9 @@ button.cm-button {
 .visible-mobile {
   display: none; }
 
+.visible-lg {
+  display: none; }
+
 /* Modal */
 .cm-modal {
   position: fixed;
@@ -272,7 +297,7 @@ button.cm-button {
   min-height: 100vh;
   top: 0px;
   left: 0px;
-  transition: .5s; }
+  transition: 0.5s; }
   .cm-modal.in.opening, .cm-modal.in {
     display: flex;
     opacity: 1; }
@@ -326,17 +351,13 @@ body.modal-opened {
     opacity: 0.7; }
 
 /* Modal */
-.hero-image {
-  object-fit: contain;
-  height: 750px;
-  object-position: 90% 0px; }
-
 /* Media Queries*/
 @media (min-width: 1367px) {
-  .hero-image {
-    object-fit: contain;
-    height: 580px;
-    object-position: 90% 0px; } }
+  .visible-md {
+    display: none; }
+
+  .visible-lg {
+    display: block; } }
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none; }
@@ -357,7 +378,8 @@ body.modal-opened {
     background-position: center;
     background-size: cover; }
     .hero .hero-content > .cm-title-lg {
-      width: 66%; }
+      width: 66%;
+      font-weight: 300; }
     .hero .hero-content > .hero-desc {
       width: 70%; }
     .hero .hero-image {
@@ -378,7 +400,7 @@ body.modal-opened {
         margin: auto;
         margin-bottom: 30px; }
       #offering > div > div > h3 {
-        font-weight: 100; }
+        font-weight: 300; }
 
   #addtional {
     padding-top: 0px;
@@ -416,8 +438,7 @@ body.modal-opened {
         margin-bottom: 24px;
         width: 88px; }
       .service-box:nth-child(even) > div > h1, .service-box:nth-child(odd) > div > h1 {
-        text-align: center;
-        font-weight: 100; }
+        text-align: center; }
       .service-box:nth-child(even) > div .cm-divider-left, .service-box:nth-child(odd) > div .cm-divider-left {
         transform: translateX(-50%);
         left: 50%;
@@ -433,7 +454,15 @@ body.modal-opened {
 
   #imageCta > div > a {
     font-weight: 100;
-    font-size: 20px; }
+    font-size: 18px;
+    bottom: 20px;
+    width: calc(100% - 30px);
+    left: 15px; }
+    #imageCta > div > a > img {
+      height: 11px; }
+  #imageCta > div > img {
+    max-height: 100%;
+    object-fit: unset; }
 
   #cm-terms {
     background: #f5f5f5; }
