@@ -328,7 +328,7 @@ body.modal-opened {
 /* Modal */
 .hero-image {
   object-fit: contain;
-  height: 580px;
+  height: 750px;
   object-position: 90% 0px; }
 
 /* Media Queries*/
