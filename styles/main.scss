@@ -798,12 +798,17 @@ body.modal-opened {
       margin-bottom: 40px;
     }
   }
-  #availForm.visible{
-      transform: translateY(103%);
-    //   width: 100vw;
-    max-width: 100vw;
-    padding: 90px 45px;
-    &.visible-mobile{
+  #availForm{
+    &.visible{
+        transform: translateY(103%);
+      //   width: 100vw;
+      max-width: 100vw;
+      padding: 90px 45px;
+      &.show-mobile{
+        transform: translateY(0%);        
+      }
+    }
+    &.show-mobile{
       transform: translateY(0%);        
     }
     button.cm-button.primary{

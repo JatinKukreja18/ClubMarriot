@@ -660,11 +660,13 @@ body.modal-opened {
     transform: translateY(103%);
     max-width: 100vw;
     padding: 90px 45px; }
-    #availForm.visible.visible-mobile {
+    #availForm.visible.show-mobile {
       transform: translateY(0%); }
-    #availForm.visible button.cm-button.primary {
-      display: block;
-      margin: auto; }
+  #availForm.show-mobile {
+    transform: translateY(0%); }
+  #availForm button.cm-button.primary {
+    display: block;
+    margin: auto; }
 
   #avail-title {
     width: 100%; }

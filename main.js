@@ -8,9 +8,11 @@ function scrollcheck() {
     if (document.body.scrollTop >= document.querySelector('#hotelList').offsetTop - 200  || document.documentElement.scrollTop >= document.querySelector('#hotelList').offsetTop - 200 || document.documentElement.scrollTop == difference) {
         document.querySelector('.strokebox').classList.add('visible');
     }
-    if (document.body.scrollTop >= document.querySelector('#offering').offsetTop - 200  || document.documentElement.scrollTop >= document.querySelector('#offering').offsetTop - 200) {
-        document.querySelector('#availForm').classList.remove('visible');        
-        document.querySelector('#avail-button').classList.remove('hidden');        
+    if(document.body.clientWidth > 767){
+        if (document.body.scrollTop >= document.querySelector('#offering').offsetTop - 200  || document.documentElement.scrollTop >= document.querySelector('#offering').offsetTop - 200) {
+            document.querySelector('#availForm').classList.remove('visible');        
+            document.querySelector('#avail-button').classList.remove('hidden');        
+        }
     }
 }
 function closeModalSteps(target){
@@ -27,7 +29,7 @@ function toggleForm(){
         document.querySelector('#availFormCross').classList.toggle('visible');        
     }
     else{
-        document.querySelector('#availForm').classList.toggle('visible-mobile');        
+        document.querySelector('#availForm').classList.toggle('show-mobile');        
         document.querySelector('#availFormCollapse').classList.toggle('visible');     
     }
 }
