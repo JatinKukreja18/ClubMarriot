@@ -298,24 +298,24 @@
         </div>
 
     <script>
-      var img = document.querySelector('.hero-image')
+      // var img = document.querySelector('.hero-image')
 
-      function loaded() {
-        document.querySelector('.preloader').classList.add('loaded'); 
-      }
+      // function loaded() {
+      //   document.querySelector('.preloader').classList.add('loaded'); 
+      // }
 
-      if (img.complete) {
-        loaded()
-      } else {
-        img.addEventListener('load', loaded)
-        img.addEventListener('error', function() {
-            alert('error')
-        })
-      }
+      // if (img.complete) {
+      //   loaded()
+      // } else {
+      //   img.addEventListener('load', loaded)
+      //   img.addEventListener('error', function() {
+      //       alert('error')
+      //   })
+      // }
 
-      //  document.addEventListener("load", ()=>{
-      //   document.querySelector('.preloader').classList.add('loaded');
-      //  });
+       window.onload=  ()=>{
+        document.querySelector('.preloader').classList.add('loaded');
+       }
       //  document.querySelector('.hero-image').onload = function(e){ 
       //    if(document.querySelector('.hero-image').complete){
       //      document.querySelector('.preloader').classList.add('loaded');          
