@@ -135,27 +135,38 @@ button.cm-button{
 
 // HERO
 .hero {
-  background: url("../assets/hero-banner-x2.jpg");
-  height: 584px;
+//   background: url("../assets/hero-banner-x2.jpg");
+//   height: 584px;
+position: relative;
   width: 100%;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
     background-repeat: no-repeat;
 
-  padding-top: calc(76px + 65px);
-  >.cm-title-lg{
+  margin-top: calc(76px + 65px);
+  
+}
+.hero-image{
+    // position: absolute;
+    width: 100%;
+}
+.hero-content{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    >.cm-title-lg{
+        width: 50%;
+    }
+    > .hero-desc {
+      font-family: $font-stack;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.71;
+      color: #78797d;
       width: 50%;
-  }
-  > .hero-desc {
-    font-family: $font-stack;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    color: #78797d;
-    width: 50%;
-    padding-right: 10px;
-  }
+      padding-right: 10px;
+    }
 }
 // Offering (2nd Section)
 #offering{
@@ -398,10 +409,10 @@ body.modal-opened{
         position: relative;
     }
     .hero{
-        padding-top: 50px;
+        margin-top: 50px;
         height: 520px;
         background-repeat: no-repeat;
-        background: url("../assets/mobile-banner-x2.jpg");
+        // background: url("../assets/mobile-banner-x2.jpg");
         background-position: center;
         background-size: cover;
         >.cm-title-lg{

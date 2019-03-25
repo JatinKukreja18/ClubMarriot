@@ -114,17 +114,24 @@ button.cm-button {
 
 /* section styling */
 .hero {
-  background: url("../assets/hero-banner-x2.jpg");
-  height: 584px;
+  position: relative;
   width: 100%;
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding-top: calc(76px + 65px); }
-  .hero > .cm-title-lg {
+  margin-top: calc(76px + 65px); }
+
+.hero-image {
+  width: 100%; }
+
+.hero-content {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+  .hero-content > .cm-title-lg {
     width: 50%; }
-  .hero > .hero-desc {
+  .hero-content > .hero-desc {
     font-family: "HelveticaNeue", Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -330,10 +337,9 @@ body.modal-opened {
     position: relative; }
 
   .hero {
-    padding-top: 50px;
+    margin-top: 50px;
     height: 520px;
     background-repeat: no-repeat;
-    background: url("../assets/mobile-banner-x2.jpg");
     background-position: center;
     background-size: cover; }
     .hero > .cm-title-lg {
