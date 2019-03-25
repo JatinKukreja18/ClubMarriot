@@ -108,7 +108,7 @@ button.cm-button {
   z-index: 99;
   width: 100vw;
   height: 100vh;
-  transition: 0.8s; }
+  transition: 2s; }
   .preloader.loaded {
     opacity: 0;
     z-index: -1; }
