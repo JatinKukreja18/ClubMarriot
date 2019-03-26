@@ -352,7 +352,8 @@ font-family: $font-stack;
     box-shadow: -5px 3px 10px 0 rgba(118, 192, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 4;
-    transition: .8s;
+    visibility: hidden;
+    transition: transform .8s;
     transform: translateX(103%);
     &.visible{
         transform: translateX(0%);
@@ -709,7 +710,13 @@ body.modal-opened {
         }
     }
 }
+@media only screen and (min-width: 768px){
+  #availForm.visible{
+    visibility: visible;
+  }
+}
 @media (max-width: 767px) {
+  
   .hidden-mobile {
     display: none;
   }
@@ -854,6 +861,7 @@ body.modal-opened {
     }
   }
   #availForm{
+    transform: translateY(103%);
     &.visible{
         transform: translateY(103%);
       //   width: 100vw;
@@ -864,6 +872,7 @@ body.modal-opened {
       }
     }
     &.show-mobile{
+      visibility: visible;
       transform: translateY(0%);        
     }
     button.cm-button.primary{

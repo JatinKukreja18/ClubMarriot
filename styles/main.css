@@ -302,7 +302,8 @@ button.cm-button {
   box-shadow: -5px 3px 10px 0 rgba(118, 192, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 4;
-  transition: .8s;
+  visibility: hidden;
+  transition: transform .8s;
   transform: translateX(103%); }
   #availForm.visible {
     transform: translateX(0%); }
@@ -588,6 +589,9 @@ body.modal-opened {
     font-size: 50px; }
   .hero-content .hero-desc {
     font-size: 18px; } }
+@media only screen and (min-width: 768px) {
+  #availForm.visible {
+    visibility: visible; } }
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none; }
@@ -700,17 +704,20 @@ body.modal-opened {
     #cm-terms > ul > li {
       margin-bottom: 40px; }
 
-  #availForm.visible {
-    transform: translateY(103%);
-    max-width: 100vw;
-    padding: 90px 45px; }
-    #availForm.visible.show-mobile {
+  #availForm {
+    transform: translateY(103%); }
+    #availForm.visible {
+      transform: translateY(103%);
+      max-width: 100vw;
+      padding: 90px 45px; }
+      #availForm.visible.show-mobile {
+        transform: translateY(0%); }
+    #availForm.show-mobile {
+      visibility: visible;
       transform: translateY(0%); }
-  #availForm.show-mobile {
-    transform: translateY(0%); }
-  #availForm button.cm-button.primary {
-    display: block;
-    margin: auto; }
+    #availForm button.cm-button.primary {
+      display: block;
+      margin: auto; }
 
   #avail-title {
     width: 100%; }
