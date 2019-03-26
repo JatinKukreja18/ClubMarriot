@@ -731,6 +731,19 @@ body.modal-opened {
 
 /* Media Queries*/
 @media (min-width: 1367px) {
+  .thank-you{
+    .icon-block{
+      >img{
+        width: 110px;
+      }
+    }
+    h1{
+    font-size: 50px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
     .visible-md{
         display: none;
     }
@@ -970,4 +983,5 @@ body.modal-opened {
     cursor: pointer;
     visibility: visible
 }
+
 }

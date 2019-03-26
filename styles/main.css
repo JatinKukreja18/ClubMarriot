@@ -609,6 +609,13 @@ body.modal-opened {
 
 /* Media Queries*/
 @media (min-width: 1367px) {
+  .thank-you .icon-block > img {
+    width: 110px; }
+  .thank-you h1 {
+    font-size: 50px; }
+  .thank-you p {
+    font-size: 18px; }
+
   .visible-md {
     display: none; }
 
