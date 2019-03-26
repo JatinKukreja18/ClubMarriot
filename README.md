@@ -1,2 +1,2 @@
 # ClubMarriot
-[Demo](https://jatinkukreja18.github.io/ClubMarriot/)
+[Demo](https://jatinkukreja18.github.io/ClubMarriott/)
