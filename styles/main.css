@@ -418,7 +418,7 @@ button.cm-button {
     #imageCta > div > img {
       width: 100%;
       object-fit: cover;
-      max-height: 400px; }
+      max-height: 600px; }
     #imageCta > div > a {
       font-size: 30px;
       text-decoration: none;
