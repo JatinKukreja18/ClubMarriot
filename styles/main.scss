@@ -364,6 +364,14 @@ font-family: $font-stack;
     &.mobile-visible{
         transform: translateY(0%);
     }
+    .subtext{
+      font-family: $font-stack;
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 1.4;
+      text-align: center;
+      color: #78797d;
+    }
 }
 //  form styling ends
 /* section styling */
@@ -947,6 +955,7 @@ body.modal-opened {
         display:block;
         margin: auto;
     }
+    
   }
   #avail-title{
     width: 100%;

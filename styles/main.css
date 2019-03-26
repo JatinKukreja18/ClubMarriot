@@ -310,6 +310,13 @@ button.cm-button {
     transform: translateX(0%); }
   #availForm.mobile-visible {
     transform: translateY(0%); }
+  #availForm .subtext {
+    font-family: "HelveticaNeue", Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+    color: #78797d; }
 
 /* section styling */
 .hero {
