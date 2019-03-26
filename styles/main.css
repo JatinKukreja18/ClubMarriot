@@ -386,10 +386,14 @@ button.cm-button {
     order: 1; }
   .service-box:nth-child(even) > div {
     order: 2; }
+    .service-box:nth-child(even) > div .cm-divider-left {
+      left: -15px; }
   .service-box:nth-child(odd) > img {
     order: 2; }
   .service-box:nth-child(odd) > div {
     order: 1; }
+    .service-box:nth-child(odd) > div > h1 {
+      padding-left: 5px; }
   .service-box > div {
     width: 38%; }
     .service-box > div > p {
@@ -434,15 +438,16 @@ button.cm-button {
   background: #fbfbfb;
   padding-top: 70px;
   padding-bottom: 70px; }
-  #cm-terms > ul {
+  #cm-terms ul {
     padding: 0px;
     margin: 0px;
     list-style-type: none; }
-    #cm-terms > ul li {
+    #cm-terms ul li {
       font-size: 15px;
       font-weight: 300;
       line-height: 1.8;
       color: #2a2a2a;
+      margin-bottom: 3px;
       font-style: "HelveticaNeue", Helvetica, sans-serif; }
 
 #hotelList {
