@@ -34,7 +34,8 @@ function toggleForm(){
     }
     else{
         document.querySelector('#availForm').classList.toggle('show-mobile');        
-        document.querySelector('#availFormCollapse').classList.toggle('visible');     
+        document.querySelector('#availFormCollapse').classList.remove('visible');    
+        document.querySelector('#availFormCross').classList.remove('visible');        
     }
 }
 function closeModalCross(e){
