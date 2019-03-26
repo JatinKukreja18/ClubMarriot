@@ -139,11 +139,14 @@ font-family: $font-stack;
     color: #000000;
     outline: none;
     font-size: 14px;
-    width: 278px;
+    width: 100%;
     margin-bottom: 20px;
     font-weight: 300;
     &:not(:placeholder-shown):invalid{
         border-color: #e44b4b;
+    }
+    &:focus{
+      border-bottom: 1px solid #000; 
     }
 }
 .cm-input::placeholder{
@@ -161,7 +164,7 @@ font-family: $font-stack;
 .cm-input-group{
     position: relative;
     margin-bottom: 20px;
-    width: 278px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     .cm-input{
@@ -172,11 +175,17 @@ font-family: $font-stack;
     &.vertical{
         flex-direction: column;
     }
+    &.start{
+      justify-content: flex-start;
+    }
 }
 .cm-input-label{
     display: flex;
     margin-bottom: 10px;
     align-items: flex-start;
+    &.noMargin{
+      margin:  0px;
+    }
     span{
         width: calc(100% - 27px);
         font-family: $font-stack;
@@ -189,6 +198,24 @@ font-family: $font-stack;
         cursor: pointer;
         text-decoration: underline;
     }
+}
+.disguise-text{
+  width: calc(100% - 27px);
+        font-family: $font-stack;
+        font-size: 10px;
+        margin-left: 27px;
+        font-weight: 300;
+        line-height: 1.4;
+        color: #000000;
+        margin-bottom: 10px;
+        >a{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        &.collapse{
+          margin-left: 2px;
+          width: auto;
+        }
 }
 .cm-input-checkbox{
     display: none;
@@ -218,6 +245,10 @@ font-family: $font-stack;
         color: #cbcbcb;
         cursor: not-allowed;    
         pointer-events: none;
+    }
+    .cm-button.primary{
+      display:block;
+        margin: auto;
     }
 }
 // custom select
@@ -249,15 +280,15 @@ font-family: $font-stack;
     >.cm-select-option{
         height: 26px;
         padding: 5px;
-        background-color: #ebf2f8;
+        background-color: #fff;
         font-family: $font-stack;
         font-size: 14px;
         width: 100%;
-        transition: .3s;
+        transition: translate .3s;
         color: #000000;
         cursor: pointer;
         &:hover,&.active,&.selected{
-            background: #fff;
+            background: #ebf2f8;
         }
     }
     &.in{
@@ -317,7 +348,7 @@ font-family: $font-stack;
     top: 0px;
     height: 100vh;
     width: 100vw;
-    max-width: 378px;
+    max-width: 480px;
     box-shadow: -5px 3px 10px 0 rgba(118, 192, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 4;
@@ -616,13 +647,19 @@ body.modal-opened {
     width: 69.5%;
 }
 #avail-title{
-    width: 70px;
+    width: 100%;
+}
+#avail-title-select{
+  width: calc(30.5% - 15px);
 }
 #avail-pincode{
-    width: 35%;
+  width: 35%;
+}
+#state-select{
+  width: calc(65% - 15px);
 }
 #avail-state{
-    width: 168px;
+    width: 100%;
 }
 #availFormCross{
     position: absolute;
@@ -652,6 +689,17 @@ body.modal-opened {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    }
+    .hero-image{
+        max-height: 75vh;
+    }
+    .hero-content {
+        > .cm-title-lg {
+          font-size: 50px;
+        }
+          .hero-desc{
+          font-size: 18px;
+        }
     }
 }
 @media (max-width: 767px) {

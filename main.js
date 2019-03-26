@@ -13,6 +13,10 @@ function scrollcheck() {
             document.querySelector('#availForm').classList.remove('visible');        
             document.querySelector('#avail-button').classList.remove('hidden');        
         }
+        else if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
+            document.querySelector('#availForm').classList.add('visible');        
+            document.querySelector('#avail-button').classList.add('hidden');   
+        }
     }
 }
 function closeModalSteps(target){
@@ -40,3 +44,19 @@ function closeModal(value){
     const target = '#' + document.querySelector('.cm-modal.in').id;
     closeModalSteps(target)
 }
+function unselectAll(target){
+        Array.from(target.querySelectorAll('.cm-select-option')).forEach(element => {
+          element.classList.remove('active')
+          element.classList.remove('selected')
+        });
+      }
+      function submitForm(e){
+        console.log(this)
+        event.preventDefault();
+        document.querySelector('#deduct-modal').classList.add('in');
+        if(document.body.clientWidth < 767){
+          document.querySelector('#availForm').classList.toggle('visible-mobile');        
+          document.querySelector('#availForm').reset();      
+
+        }
+      }

@@ -123,11 +123,13 @@ button.cm-button {
   color: #000000;
   outline: none;
   font-size: 14px;
-  width: 278px;
+  width: 100%;
   margin-bottom: 20px;
   font-weight: 300; }
   .cm-input:not(:placeholder-shown):invalid {
     border-color: #e44b4b; }
+  .cm-input:focus {
+    border-bottom: 1px solid #000; }
 
 .cm-input::placeholder {
   font-family: "HelveticaNeue", Helvetica, sans-serif;
@@ -144,7 +146,7 @@ button.cm-button {
 .cm-input-group {
   position: relative;
   margin-bottom: 20px;
-  width: 278px;
+  width: 100%;
   display: flex;
   justify-content: space-between; }
   .cm-input-group .cm-input {
@@ -153,11 +155,15 @@ button.cm-button {
     margin: 0px; }
   .cm-input-group.vertical {
     flex-direction: column; }
+  .cm-input-group.start {
+    justify-content: flex-start; }
 
 .cm-input-label {
   display: flex;
   margin-bottom: 10px;
   align-items: flex-start; }
+  .cm-input-label.noMargin {
+    margin: 0px; }
   .cm-input-label span {
     width: calc(100% - 27px);
     font-family: "HelveticaNeue", Helvetica, sans-serif;
@@ -168,6 +174,22 @@ button.cm-button {
   .cm-input-label a {
     cursor: pointer;
     text-decoration: underline; }
+
+.disguise-text {
+  width: calc(100% - 27px);
+  font-family: "HelveticaNeue", Helvetica, sans-serif;
+  font-size: 10px;
+  margin-left: 27px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 10px; }
+  .disguise-text > a {
+    text-decoration: underline;
+    cursor: pointer; }
+  .disguise-text.collapse {
+    margin-left: 2px;
+    width: auto; }
 
 .cm-input-checkbox {
   display: none; }
@@ -191,6 +213,9 @@ button.cm-button {
     color: #cbcbcb;
     cursor: not-allowed;
     pointer-events: none; }
+  .cm-form .cm-button.primary {
+    display: block;
+    margin: auto; }
 
 .cm-select {
   position: relative; }
@@ -217,15 +242,15 @@ button.cm-button {
   .cm-select-options > .cm-select-option {
     height: 26px;
     padding: 5px;
-    background-color: #ebf2f8;
+    background-color: #fff;
     font-family: "HelveticaNeue", Helvetica, sans-serif;
     font-size: 14px;
     width: 100%;
-    transition: .3s;
+    transition: translate .3s;
     color: #000000;
     cursor: pointer; }
     .cm-select-options > .cm-select-option:hover, .cm-select-options > .cm-select-option.active, .cm-select-options > .cm-select-option.selected {
-      background: #fff; }
+      background: #ebf2f8; }
   .cm-select-options.in {
     display: block; }
 
@@ -273,7 +298,7 @@ button.cm-button {
   top: 0px;
   height: 100vh;
   width: 100vw;
-  max-width: 378px;
+  max-width: 480px;
   box-shadow: -5px 3px 10px 0 rgba(118, 192, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 4;
@@ -511,13 +536,19 @@ body.modal-opened {
   width: 69.5%; }
 
 #avail-title {
-  width: 70px; }
+  width: 100%; }
+
+#avail-title-select {
+  width: calc(30.5% - 15px); }
 
 #avail-pincode {
   width: 35%; }
 
+#state-select {
+  width: calc(65% - 15px); }
+
 #avail-state {
-  width: 168px; }
+  width: 100%; }
 
 #availFormCross {
   position: absolute;
@@ -543,7 +574,15 @@ body.modal-opened {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; } }
+    justify-content: center; }
+
+  .hero-image {
+    max-height: 75vh; }
+
+  .hero-content > .cm-title-lg {
+    font-size: 50px; }
+  .hero-content .hero-desc {
+    font-size: 18px; } }
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none; }
