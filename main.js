@@ -34,6 +34,7 @@ function toggleForm(){
     }
     else{
         document.querySelector('#availForm').classList.toggle('show-mobile');        
+        document.querySelector('body').classList.toggle('noScroll');        
         document.querySelector('#availFormCollapse').classList.remove('visible');    
         document.querySelector('#availFormCross').classList.remove('visible');        
     }
