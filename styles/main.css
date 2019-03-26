@@ -215,7 +215,7 @@ button.cm-button {
     pointer-events: none; }
   .cm-form .cm-button.primary {
     display: block;
-    margin: auto; }
+    margin: 0 auto; }
 
 .cm-select {
   position: relative; }
@@ -583,7 +583,7 @@ body.modal-opened {
     justify-content: center; }
 
   .hero-image {
-    max-height: 75vh; }
+    max-height: 85vh; }
 
   .hero-content > .cm-title-lg {
     font-size: 50px; }
