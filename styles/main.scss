@@ -693,10 +693,7 @@ body.modal-opened {
         display: block
     }
     #availForm{
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+      padding-top:100px;
     }
     .hero-image{
         max-height: 85vh;
@@ -849,8 +846,8 @@ body.modal-opened {
         }
       }
       >img{
-          max-height: 100%;
-          object-fit: unset
+          height: 260px;
+          // object-fit: unset
       }
       
   }
@@ -863,13 +860,16 @@ body.modal-opened {
   #availForm{
     transform: translateY(103%);
     max-width:100vw;
+    transition: transform 0s;
     &.visible{
         transform: translateY(103%);
       //   width: 100vw;
       max-width: 100vw;
+      transition: 0s;
       padding: 90px 45px;
       &.show-mobile{
         transform: translateY(0%);        
+        transition: transform 0.8s;
       }
     }
     &.show-mobile{
