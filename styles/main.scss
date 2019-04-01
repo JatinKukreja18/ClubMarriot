@@ -390,9 +390,9 @@ font-family: $font-stack;
 }
 .hero-image {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   max-height: 65vh;
-  object-position: 100%;
+  object-position: bottom;
 }
 .hero-content {
   position: absolute;
@@ -771,6 +771,8 @@ body.modal-opened {
     }
     .hero-image{
         max-height: 85vh;
+        object-fit: contain;
+        object-position: 100%;
     }
     .hero-content {
         > .cm-title-lg {

@@ -332,9 +332,9 @@ button.cm-button {
 
 .hero-image {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   max-height: 65vh;
-  object-position: 100%; }
+  object-position: bottom; }
 
 .hero-content {
   position: absolute;
@@ -642,7 +642,9 @@ body.modal-opened {
     padding-top: 100px; }
 
   .hero-image {
-    max-height: 85vh; }
+    max-height: 85vh;
+    object-fit: contain;
+    object-position: 100%; }
 
   .hero-content > .cm-title-lg {
     font-size: 50px; }
