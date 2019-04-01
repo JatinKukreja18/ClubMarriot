@@ -111,6 +111,7 @@ button.cm-button {
   font-size: 14px;
   border: solid 1px #000000;
   margin-bottom: 15px;
+  background:#fff;
   transition: 0.3s;
   &.primary {
     color: #000;
@@ -238,6 +239,7 @@ font-family: $font-stack;
     padding: 50px;
     margin: auto;
     // display: flex;
+    overflow-y: scroll;
     overflow-y: overlay;
     // flex-direction: column;
     &:valid .cm--button.primary{ 
