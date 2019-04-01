@@ -632,6 +632,9 @@ body.modal-opened {
   visibility: hidden; }
 
 /* Media Queries*/
+@media (max-width: 1023px) {
+  .banner-down {
+    display: none; } }
 @media (min-width: 1367px) {
   .thank-you {
     width: 500px; }
@@ -662,6 +665,9 @@ body.modal-opened {
   .hero-content .hero-desc {
     font-size: 18px; } }
 @media (max-width: 767px) {
+  .banner-down {
+    display: none; }
+
   .modal-body {
     margin: 0px;
     padding: 160px 60px 60px 60px; }
