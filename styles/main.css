@@ -328,7 +328,9 @@ button.cm-button {
 .hero {
   position: relative;
   width: 100%;
-  margin-top: calc(76px + 65px); }
+  margin-top: 65px;
+  background: url("./assets/hero-banner-x2.jpg");
+  background-size: cover; }
 
 .hero-image {
   width: 100%;
@@ -338,7 +340,7 @@ button.cm-button {
 
 .hero-content {
   position: absolute;
-  top: 0px;
+  top: 76px;
   max-width: 100%;
   right: 0px;
   left: 0px; }
