@@ -19,6 +19,9 @@
 /* MIXIN VARIABLES */
 /* MIXIN VARIABLES */
 /* Generic styling*/
+html {
+  scroll-behavior: smooth; }
+
 body {
   margin: 0px;
   width: 100%;

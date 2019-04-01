@@ -25,6 +25,9 @@ $font-stack: "HelveticaNeue", Helvetica, sans-serif;
 $primary-black: #2a2a2a;
 /* MIXIN VARIABLES */
 /* Generic styling*/
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0px;
   width: 100%;
