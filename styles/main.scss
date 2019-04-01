@@ -396,6 +396,8 @@ font-family: $font-stack;
   object-fit: cover;
   max-height: 65vh;
   object-position: bottom;
+  font-family: 'object-fit: cover;object-position: bottom;';
+
 }
 .banner-down{
   cursor: pointer;
@@ -534,6 +536,8 @@ font-family: $font-stack;
     > img {
       width: 100%;
       object-fit: cover;
+      font-family: 'object-fit: cover';
+
       max-height: 600px;
     }
     > a {
@@ -781,6 +785,7 @@ body.modal-opened {
         max-height: 85vh;
         object-fit: contain;
         object-position: 100%;
+        font-family: 'object-fit: contain;object-position: 100%;';
     }
     .hero-content {
         > .cm-title-lg {
@@ -836,6 +841,7 @@ body.modal-opened {
     .hero-image {
       position: absolute;
       object-fit: unset;
+      font-family: 'object-fit: unset';
       height: unset;
       max-height: unset;
       bottom: 0px;
