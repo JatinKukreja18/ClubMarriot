@@ -23,7 +23,7 @@ function closeModalSteps(target){
     document.querySelector(target).classList.add('opening');           
         document.querySelector(target).classList.remove('in');
         document.querySelector('body').classList.remove('modal-opened')
-        setTimeout(() => {
+        setTimeout(function(){
             document.querySelector(target).classList.remove('opening');
         }, 500);
 }
