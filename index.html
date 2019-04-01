@@ -421,7 +421,7 @@
               element.addEventListener('click', function(){       
                   const target =  element.dataset.target;
               document.querySelector(target).classList.add('opening');
-              setTimeout(() => {
+              setTimeout( function(){
                   document.querySelector(target).classList.add('in');
                   document.querySelector(target).classList.remove('opening');
                   document.querySelector('body').classList.add('modal-opened');
