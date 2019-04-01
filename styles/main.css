@@ -470,6 +470,7 @@ button.cm-button {
   padding: 50px 40px; }
   #hotelList > img,
   #hotelList > svg {
+    height: 852px;
     width: 100%; }
 
 .strokebox {
