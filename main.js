@@ -47,7 +47,7 @@ function closeModal(value){
     closeModalSteps(target)
 }
 function unselectAll(target){
-        Array.from(target.querySelectorAll('.cm-select-option')).forEach(element => {
+        Array.from(target.querySelectorAll('.cm-select-option')).forEach(function(element) {
           element.classList.remove('active')
           element.classList.remove('selected')
         });
