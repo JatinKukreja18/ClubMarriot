@@ -479,6 +479,8 @@ button.cm-button {
       color: #2a2a2a;
       margin-bottom: 3px;
       font-style: "HelveticaNeue", Helvetica, sans-serif; }
+    #cm-terms ul a {
+      text-decoration: underline; }
 
 #hotelList {
   background: #ffffff;
@@ -695,15 +697,17 @@ body.modal-opened {
     position: relative; }
 
   .hero {
-    margin-top: 50px;
+    margin-top: 0px;
     height: 520px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-    .hero .hero-content > .cm-title-lg {
-      width: 66%; }
-    .hero .hero-content > .hero-desc {
-      width: 70%; }
+    .hero .hero-content {
+      top: 45px; }
+      .hero .hero-content > .cm-title-lg {
+        width: 66%; }
+      .hero .hero-content > .hero-desc {
+        width: 70%; }
     .hero .hero-image {
       position: absolute;
       object-fit: unset;
@@ -846,6 +850,11 @@ body.modal-opened {
     right: 35px;
     top: 35px;
     cursor: pointer;
-    visibility: visible; } }
+    visibility: visible; }
+
+  #hotelList {
+    padding-bottom: 90px; }
+    #hotelList > img, #hotelList svg {
+      height: auto; } }
 
 /*# sourceMappingURL=main.css.map */

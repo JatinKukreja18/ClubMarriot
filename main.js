@@ -23,7 +23,7 @@ function scrollToSection(el){
         if(document.documentElement){
             document.documentElement.scrollTop = document.querySelector(el).offsetTop - 65;
         }
-        else if(document.body){
+        if(document.body){
             document.body.scrollTop = document.querySelector(el).offsetTop - 65;
         }
 }

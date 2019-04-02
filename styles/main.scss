@@ -581,6 +581,9 @@ font-family: $font-stack;
       margin-bottom: 3px;
       font-style: $font-stack;
     }
+    a{
+      text-decoration: underline;
+    }
   }
 }
 // hotel list (6th section)
@@ -836,13 +839,14 @@ body.modal-opened {
     position: relative;
   }
   .hero {
-    margin-top: 50px;
+    margin-top: 0px;
     height: 520px;
     background-repeat: no-repeat;
     // background: url("../assets/mobile-banner-x2.jpg");
     background-position: center;
     background-size: cover;
     .hero-content {
+      top: 45px;
       > .cm-title-lg {
         width: 66%;
       }
@@ -1029,6 +1033,11 @@ body.modal-opened {
     top: 35px;
     cursor: pointer;
     visibility: visible
-}
-
+  }
+  #hotelList {
+    padding-bottom: 90px;
+    >img,svg{
+      height: auto;
+    }
+  }
 }
