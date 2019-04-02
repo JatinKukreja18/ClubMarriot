@@ -596,6 +596,7 @@ body.modal-opened {
   .thank-you h1 {
     font-size: 28px;
     font-family: "HelveticaNeue", Helvetica, sans-serif;
+    font-weight: 300;
     line-height: 1.29;
     text-align: center;
     color: #000000; }
