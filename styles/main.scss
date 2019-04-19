@@ -397,10 +397,11 @@ font-family: $font-stack;
 .hero-image {
   width: 100%;
   object-fit: cover;
-  max-height: 65vh;
+  height: calc(100vh - 65px);
   object-position: bottom;
   font-family: 'object-fit: cover;object-position: bottom;';
-
+  width: calc(100% - 440px);
+  object-fit: contain;
 }
 .banner-down{
   cursor: pointer;
@@ -477,6 +478,7 @@ font-family: $font-stack;
   > .cm-title-lg {
     width: 80%;
     margin: 0px auto 115px auto;
+    font-weight: 300;
   }
 }
 .service-box {
@@ -541,7 +543,7 @@ font-family: $font-stack;
       width: 100%;
       object-fit: cover;
       font-family: 'object-fit: cover';
-
+      display: block;
       max-height: 600px;
     }
     > a {
@@ -563,6 +565,14 @@ font-family: $font-stack;
        }
     }
   }
+}
+.cm-overlay-image{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.06));
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 // Terms and conditions (5th section)
 #cm-terms {
@@ -795,10 +805,12 @@ body.modal-opened {
       padding-top:100px;
     }
     .hero-image{
-        max-height: 85vh;
+      max-height: unset;
+        // height: 90vh;
         object-fit: contain;
         object-position: 100%;
         font-family: 'object-fit: contain;object-position: 100%;';
+        width: calc(100% - 240px);
     }
     .hero-content {
         > .cm-title-lg {
@@ -814,7 +826,29 @@ body.modal-opened {
     // visibility: visible;
   }
 }
+@media only screen and (min-width:768px) and (max-width: 1023px){
+  .hero-image{
+    // height: 100vh;
+    // max-height: 70vh;
+  }
+}
+@media only screen and  (max-width: 991px){
+  .cm-wrapper-md {
+    padding: 0px 30px;
+  }
+  #offering{
+    padding: 50px 30px;
+  }
+}
+@media only screen and (min-width:1024px) and (max-width: 1366){
+  .hero-image{
+    height: 70vh;
+  }
+}
 @media (max-width: 767px) {
+  .visible-md{
+    display: none;
+  }
   .banner-down{
     display: none;
   }
@@ -858,7 +892,9 @@ body.modal-opened {
     }
     .hero-image {
       position: absolute;
-      object-fit: unset;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
       font-family: 'object-fit: unset';
       height: unset;
       max-height: unset;

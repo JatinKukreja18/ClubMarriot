@@ -339,9 +339,11 @@ button.cm-button {
 .hero-image {
   width: 100%;
   object-fit: cover;
-  max-height: 65vh;
+  height: calc(100vh - 65px);
   object-position: bottom;
-  font-family: 'object-fit: cover;object-position: bottom;'; }
+  font-family: 'object-fit: cover;object-position: bottom;';
+  width: calc(100% - 440px);
+  object-fit: contain; }
 
 .banner-down {
   cursor: pointer;
@@ -402,7 +404,8 @@ button.cm-button {
   padding-bottom: 125px; }
   #addtional > .cm-title-lg {
     width: 80%;
-    margin: 0px auto 115px auto; }
+    margin: 0px auto 115px auto;
+    font-weight: 300; }
 
 .service-box {
   display: flex;
@@ -447,6 +450,7 @@ button.cm-button {
       width: 100%;
       object-fit: cover;
       font-family: 'object-fit: cover';
+      display: block;
       max-height: 600px; }
     #imageCta > div > a {
       font-size: 30px;
@@ -463,6 +467,14 @@ button.cm-button {
         transition: .3s; }
       #imageCta > div > a:hover > img {
         padding-left: 5px; }
+
+.cm-overlay-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.06));
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; }
 
 #cm-terms {
   background: #fbfbfb;
@@ -663,16 +675,29 @@ body.modal-opened {
     padding-top: 100px; }
 
   .hero-image {
-    max-height: 85vh;
+    max-height: unset;
     object-fit: contain;
     object-position: 100%;
-    font-family: 'object-fit: contain;object-position: 100%;'; }
+    font-family: 'object-fit: contain;object-position: 100%;';
+    width: calc(100% - 240px); }
 
   .hero-content > .cm-title-lg {
     font-size: 50px; }
   .hero-content .hero-desc {
     font-size: 18px; } }
+@media only screen and (max-width: 991px) {
+  .cm-wrapper-md {
+    padding: 0px 30px; }
+
+  #offering {
+    padding: 50px 30px; } }
+@media only screen and (min-width: 1024px) and (max-width: 1366) {
+  .hero-image {
+    height: 70vh; } }
 @media (max-width: 767px) {
+  .visible-md {
+    display: none; }
+
   .banner-down {
     display: none; }
 
@@ -712,7 +737,9 @@ body.modal-opened {
         width: 70%; }
     .hero .hero-image {
       position: absolute;
-      object-fit: unset;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
       font-family: 'object-fit: unset';
       height: unset;
       max-height: unset;
