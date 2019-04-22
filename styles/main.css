@@ -803,7 +803,8 @@ body.modal-opened {
         width: 88px; }
       .service-box:nth-child(even) > div > h1, .service-box:nth-child(odd) > div > h1 {
         text-align: center;
-        width: 100%; }
+        width: 100%;
+        font-size: 24px; }
       .service-box:nth-child(even) > div .cm-divider-left, .service-box:nth-child(odd) > div .cm-divider-left {
         transform: translateX(-50%);
         left: 50%;
